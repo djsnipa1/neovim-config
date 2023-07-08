@@ -1,0 +1,55 @@
+if true then return {} end
+
+  -- mock code for an adapter
+-- local dap = require('dap')
+-- dap.adapters.language = function(cb, config)
+--   if config.request == 'attach' then
+-- 		cb({type = "server", port = 9222})
+--   else if config.request == 'launch' then
+-- 		cb({type = 'executable', command = 'path/to/executable'})
+--   end
+-- end
+--
+--
+--
+-- return {
+--   {
+--     "mfussenegger/nvim-dap",
+--     lazy = true,
+--     dependencies = {
+--       "rcarriga/nvim-dap-ui",
+--     },
+--     keys = {
+--       { "<leader>dd", function() require('dap').toggle_breakpoint() end },
+--       { "<leader>dc", function() require('dap').continue() end },
+--       { "<leader>do", function() require('dap').step_over() end },
+--       { "<leader>di", function() require('dap').step_into() end },
+--     },
+--     config = function()
+--       require("dapui").setup()
+--     end
+--   },
+--   {
+-- 	"mfussenegger/nvim-dap",
+-- 	lazy = true,
+-- 	dependencies = {
+-- 		"rcarriga/nvim-dap-ui",
+-- 		-- lazy spec to build "microsoft/vscode-js-debug" from source
+-- 		{
+-- 			"microsoft/vscode-js-debug",
+-- 			version = "1.x",
+-- 			build = "npm i && npm run compile vsDebugServerBundle && mv dist out"
+-- 		}
+-- 	},
+-- 	keys = {...},
+-- 	config = function() 
+-- 		require("dap-vscode-js").setup({
+-- 			debugger_path = vim.fn.stdpath("data") .. "/lazy/vscode-js-debug",
+-- 			adapters = { 'pwa-node', 'pwa-chrome', 'pwa-msedge', 'node-terminal', 'pwa-extensionHost' },
+-- 		})
+-- 		require("dapui").setup()
+-- 	end
+-- }
+-- }
+--
+--
