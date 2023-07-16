@@ -1,7 +1,7 @@
-fix telescope neovim config keymap
+- [ ] fix telescope neovim config keymap
 
-lua code fold keymap fix
+- [ ] lua code fold keymap fix
 
-colorschemes
+- [ ] colorschemes
 
-put headers bash script in correct place n shit
+- [ ] put headers bash script in correct place n shit

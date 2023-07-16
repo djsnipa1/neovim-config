@@ -4,21 +4,29 @@
 --   ┆─┘┆└┘┆─┘└┘ ┆─┘┘─┘┆ └o┆└┘└┘ ┆┘ ┆   --
 ------------------------------------------
 return {
-    {
-        'ellisonleao/gruvbox.nvim',
-        priority = 1000,
-        config = function()
-            require('gruvbox').setup(
-                {
-                    overrides = {
-                        SignColumn = { bg = '#D1FF00' }
-                    }
-                }
-            )
-            vim.cmd('colorscheme gruvbox')
-        end
-    },
-    { 'LazyVim/LazyVim', opts = { colorscheme = 'gruvbox' } }
+  {
+    'ellisonleao/gruvbox.nvim',
+    priority = 1000,
+    config = function()
+      require('gruvbox').setup( -- { overrides = { SignColumn = { bg = '#D1FF00' } } }
+      )
+      vim.cmd('colorscheme gruvbox')
+      -- vim.cmd('hi MiniTablineCurrent gui=underline')
+      vim.api.nvim_set_hl(
+        0, 'MiniStatuslineModeNormal',
+          { fg = '#D1FF00', bg = '#282828' }
+      )
+      vim.api.nvim_set_hl(
+        0, 'Comment', { fg = '#111111', bold = true }
+      )
+      vim.api.nvim_set_hl(
+        0, 'Error', { fg = '#ffffff', undercurl = true }
+      )
+      vim.api.nvim_set_hl(0, 'Cursor', { reverse = true })
+
+    end
+  },
+  { 'LazyVim/LazyVim', opts = { colorscheme = 'gruvbox' } }
 }
 
 -- opts = function (_, opts)
