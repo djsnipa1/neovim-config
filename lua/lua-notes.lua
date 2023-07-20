@@ -9,6 +9,16 @@
 -- put this whenever the code below should be skipped
 -- if true then return {} end
 --
+-- {{{ lazy.nvim keys table example
+-- This 
+{
+  '<C-i>',
+  '<cmd>IconPickerInsert<cr>',
+  desc = 'Icon Picker Insert',
+  mode = { 'n', 'i' }
+}
+-- }}}
+
 -- {{{ Expirements
 -- delete 1 - to uncomment 2nd code block
 ---[[

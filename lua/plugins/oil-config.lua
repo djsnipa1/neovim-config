@@ -19,7 +19,7 @@ local keyz = {
     'Edit Config'
   },
   {
-    'mo',
+    'm0',
     function() require('oil').toggle_float(edit_path) end,
     desc = 'Oil Edit Config'
   },

@@ -6,6 +6,7 @@ return {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = { mason = false },
         nil_ls = { mason = false },
+        -- TODO: Add config for lua-language-server
         lua_ls = { mason = false },
         emmet_ls = { mason = false },
         -- prettierd = { mason = false },

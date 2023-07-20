@@ -15,6 +15,7 @@ local nixos = table.concat(
     '           ▌▝▌▌▞▖▙▌▄▌'
   }, '\n'
 )
+print(nixos)
 -- ┏┓┓┳━┓┏━┓┓ ┳o┏┏┓
 -- ┃┃┃┣━ ┃ ┃┃┏┛┃┃┃┃
 -- ┇┗┛┻━┛┛━┛┗┛ ┇┛ ┇
@@ -138,6 +139,7 @@ return {
           starter.gen_hook.aligning('center', 'center')
         }
       }
+      print('lis of items')
       for _, new_section in ipairs(config.items) do
         local first_entry = new_section[1]
         print(first_entry)

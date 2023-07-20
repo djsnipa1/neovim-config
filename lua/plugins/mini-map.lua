@@ -2,14 +2,14 @@ return {
   {
     'echasnovski/mini.map',
     version = false,
-    -- event = 'VeryLazy',
-    lazy = false,
+    event = 'VeryLazy',
+    -- lazy = false,
     config = function()
-      -- Don't lazy load this!
       require('mini.map').setup()
 
       -- opens MiniMap automatically when neovim launches
-      vim.cmd('au VimEnter * lua MiniMap.open()')
+      -- Don't lazy load this!
+      -- vim.cmd('au VimEnter * lua MiniMap.open()')
 
       local minimap = require('mini.map')
       minimap.setup(
