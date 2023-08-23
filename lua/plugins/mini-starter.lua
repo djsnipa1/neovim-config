@@ -137,37 +137,27 @@ end
 -- HACK:
 local number_width = vim.o.numberwidth
 local fold_column = vim.o.foldcolumn
+-- meaning the space from the left where the
+-- padding of mini.starter starts
 local left_padding = 7
 local option_longest_half = 6
 
--- Subtraction operations are combined in one line
-local minus_two = width - number_width - fold_column - left_padding - 2
-
-print('minus_two = ' .. minus_two)
+-- subtracts all variables to get the final padding
+local subtracted_padding = width - number_width - fold_column - left_padding - 2
 
 local in_half = function(num) return num / 2 end
-
 local round_even = function(num) return math.floor(num / 2 + 0.5) * 2 end
 
-local other_final = round_even(in_half(minus_two))
-
-print('other_final = ' .. other_final)
+local other_final = round_even(in_half(subtracted_padding))
+-- subtract by half the length of the longest menu item (Recent files)
+local final_width = other_final - (12 / 2)
 -- }}}
 
 return {
   {
     'echasnovski/mini.starter',
     opts = function()
-      -- get the window width with local width
-      -- divide in half
-      local half_width = width / 2
-
-      -- subtract by half the length of the longest menu item (Recent files)
-      local final_width = other_final - (12 / 2)
-      print('final_width = ' .. tostring(final_width))
-      -- local pad = string.rep(' ', final_width)
-      -- local pad = string.rep('6', other_final)
-      local pad = string.rep('6', final_width)
+      local pad = string.rep(' ', final_width)
 
       local new_section = function(name, action, section)
         return { name = name, action = action, section = pad .. section }

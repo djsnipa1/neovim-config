@@ -83,3 +83,11 @@ local animation = function()
 end
 
 -- }}}
+
+-- {{{ Define a table & Print the modified table
+local t = { 'Hello', 'World', 'Lua' }
+
+-- Print the modified table
+for i, v in ipairs(t) do print(v) end
+
+-- }}}
