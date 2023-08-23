@@ -10,13 +10,23 @@
 -- if true then return {} end
 --
 -- {{{ lazy.nvim keys table example
--- This 
+-- This example shows how do do different modes
 {
   '<C-i>',
   '<cmd>IconPickerInsert<cr>',
   desc = 'Icon Picker Insert',
   mode = { 'n', 'i' }
 }
+-- }}}
+
+-- {{{ simple variable boolean if else
+local useCopilot = true
+
+if useCopilot == true then
+    print('useCopilot is true')
+else
+    print('useCopilot is false')
+end
 -- }}}
 
 -- {{{ Expirements

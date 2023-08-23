@@ -1,0 +1,19 @@
+PPPPPPPPPPPPPPPPPPPPPP
+
+width / 2
+111 / 2 = 55
+
+
+      local final_width = half_width - (12 / 2)
+55 - (12 / 2) = 49
+
+NEW VERSION >
+      local final_width = half_width - (24 / 2)
+55 - (24 / 2) = 43
+
+LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+                                           121212121212
+                                                       RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR 
+LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+                                                 121212121212
+                                                            RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR 

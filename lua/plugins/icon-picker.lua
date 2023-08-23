@@ -17,14 +17,14 @@ return {
         '<Leader><Leader>iy',
         '<cmd>IconPickerYank<cr>',
         desc = 'Icon Picker Yank'
-      },
-      {
-        '<C-i>',
-        '<cmd>IconPickerInsert<cr>',
-        -- 
-        desc = 'Icon Picker Insert',
-        mode = { 'i' }
-      }
+     },
+      -- {
+      --   '<C-i>',
+      --   '<cmd>IconPickerInsert<cr>',
+      --   -- 
+      --   desc = 'Icon Picker Insert',
+      --   mode = { 'i' }
+      -- }
     }
   }
 }

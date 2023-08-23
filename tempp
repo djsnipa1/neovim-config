@@ -1,0 +1,23 @@
+ function usage
+    echo "Usage: your_script_name [options]"
+    echo ""
+    echo "Options:"
+    echo "  -h, --help  Display this help message"
+end
+
+if test (count $argv) -eq 0
+    usage
+    exit 1
+end
+
+while test (count $argv) -gt 0
+    case $argv[1]
+        in
+        -h|--help)
+            usage
+            exit 0
+            ;;
+        *)
+            # your code here
+            ;;
+    end
