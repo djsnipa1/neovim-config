@@ -3,25 +3,28 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 return {
   {
-    "neovim/nvim-lspconfig",
-    event = { "BufReadPre", "BufNewFile" },
+    'neovim/nvim-lspconfig',
+    event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
-      { "folke/neoconf.nvim", cmd = "Neoconf", config = false, dependencies = { "nvim-lspconfig" } },
-      { "folke/neodev.nvim",  opts = {} },
-      "mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
       {
-        "hrsh7th/cmp-nvim-lsp",
-        cond = function()
-          return require("lazyvim.util").has("nvim-cmp")
-        end,
+        'folke/neoconf.nvim',
+        cmd = 'Neoconf',
+        config = false,
+        dependencies = { 'nvim-lspconfig' }
       },
+      { 'folke/neodev.nvim', opts = {} },
+      'mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
+      {
+        'hrsh7th/cmp-nvim-lsp',
+        cond = function() return require('lazyvim.util').has('nvim-cmp') end
+      }
     },
     opts = {
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = { mason = false },
-        nil_ls = { mason = false },
+        -- nil_ls = { mason = false },
         -- TODO: Add config for lua-language-server
         lua_ls = {
           mason = false,
@@ -33,8 +36,7 @@ return {
               },
               diagnostics = {
                 -- Get the language server to recognize the `vim` global
-                globals = { 'vim',
-                  'require' }
+                globals = { 'vim', 'require' }
               },
               workspace = {
                 -- Make the server aware of Neovim runtime files
